@@ -32,7 +32,6 @@ class CellDetectionController extends Controller
         }
         $process->run();
 
-        // executes after the command finishes
         if (!$process->isSuccessful()) {
             throw new ProcessFailedException($process);
         }
