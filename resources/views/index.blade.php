@@ -51,7 +51,7 @@
       <div class="container">
         <div class="tabs is-centered">
           <ul>
-            <li><a href="#">GitHub Repository</a></li>
+            <li><a href="https://github.com/omegion/blood-cell-classifier-tensorflow" target="blank">GitHub Repository</a></li>
           </ul>
         </div>
       </div>

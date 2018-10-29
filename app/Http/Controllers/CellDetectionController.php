@@ -25,7 +25,11 @@ class CellDetectionController extends Controller
 
     public function run($file_name) 
     {
-        $process = new Process("python /home/vagrant/code/CellDetection/python/models/research/object_detection/test.py ".$file_name);
+        if (config('app.env' == 'local')) {
+            $process = new Process("python /home/vagrant/code/CellDetection/python/models/research/object_detection/test.py ".$file_name);
+        } else {
+            $process = new Process("python /var/www/bloodcell.xyz/python/models/research/object_detection/test.py ".$file_name);
+        }
         $process->run();
 
         // executes after the command finishes
